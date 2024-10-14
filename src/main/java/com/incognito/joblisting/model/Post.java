@@ -1,15 +1,16 @@
 package com.incognito.joblisting.model;
 
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Arrays;
 
-@Document(collation = "JobPost")
+@Document(collection = "JobPost")
 public class Post {
     private String profile;
     private String desc;
     private int exp;
-    private String tech[];
+    private String techs[];
 
     public Post() {
     }
@@ -38,12 +39,12 @@ public class Post {
         this.exp = exp;
     }
 
-    public String[] getTech() {
-        return tech;
+    public String[] getTechs() {
+        return techs;
     }
 
-    public void setTech(String[] tech) {
-        this.tech = tech;
+    public void setTechs(String[] techs) {
+        this.techs = techs;
     }
 
     @Override
@@ -52,7 +53,7 @@ public class Post {
                 "profile='" + profile + '\'' +
                 ", desc='" + desc + '\'' +
                 ", exp=" + exp +
-                ", tech=" + Arrays.toString(tech) +
+                ", techs=" + Arrays.toString(techs) +
                 '}';
     }
 }
