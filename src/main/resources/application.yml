@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: joblisting
+  data:
+    mongodb:
+      uri: mongodb+srv://nawodyaonline:${mongo_pw}@cluster0.smk7c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: incognito
